@@ -1,13 +1,6 @@
 from flask import Flask
-
 app = Flask(__name__)
 
-@app.route('/')
-def main():
-    return 'Olá, estou na aplicação'
-
-if '__main__' == __name__:
-    app.run(debug=True)
-
-
-# . .\venv\Scripts\activate
+@app.route("/", methods=["GET"])
+def hello_world():
+    return 'Ola, estou na aplicação setada'
